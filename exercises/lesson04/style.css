@@ -154,30 +154,7 @@
   color: #ccc;
 }
 
-.member-list {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
 
-.member {
-  text-align: center;
-  width: 150px;
-}
-
-.member img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.member p {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #ccc;
-}
 /* =============================================
    ゲームセクション
    =============================================
