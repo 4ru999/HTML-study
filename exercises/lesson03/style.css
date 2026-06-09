@@ -65,9 +65,12 @@ h2 {
 }
 
 /* .wrap-demo に flex-wrap と gap を書こう */
-.nowrap-demo { 
+.nowrap-demo {
+  flex-wrap: nowrap;
+  gap: 30px;
+} 
   /* デフォルト：折り返さない（はみ出す） */
-}
+
 
 /* ===== 練習問題: カードレイアウト ===== */
 /* .card-container と .card のスタイルを自分で書いてみよう */
