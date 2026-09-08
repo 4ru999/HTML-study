@@ -218,3 +218,26 @@
      .footer に text-align: center, padding, background-color を設定
      color, font-size を設定
    ============================================= */
+/* お問い合わせフォーム */
+#contact form {
+    width: 500px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+#contact input,
+#contact select,
+#contact textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contact textarea {
+    resize: vertical;
+}
+
+#contact button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 8px 30px;
+}

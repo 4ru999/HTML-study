@@ -1,4 +1,176 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+    <meta charset="UTF-8">
+    <title>TeamOCA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header class="header">
+
+        <img src="img/logo.png" alt="TeamOCAのロゴ">
+
+        <nav class="header-nav">
+            <a href="index.html">HOME</a>
+            <a href="#member">MEMBER</a>
+            <a href="#game">GAME</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ABOUT -->
+    <section class="about">
+
+        <h1>TeamOCA</h1>
+
+        <p>
+            私たちはゲーム制作をしているチームです。<br>
+            メンバーそれぞれが楽しく活動しています！
+        </p>
+
+    </section>
+
+
+    <!-- MEMBER -->
+    <section class="section" id="member">
+
+    <h2>MEMBER</h2>
+
+    <div class="member-list">
+
+        <div class="member">
+            <img src="img/member/adachi.jpeg" alt="member1">
+            <p>member1</p>
+        </div>
+
+        <div class="member">
+            <img src="img/member/kawada.jpeg" alt="member2">
+            <p>member2</p>
+        </div>
+
+        <div class="member">
+            <img src="img/member/kuwata.jpeg" alt="member3">
+            <p>member3</p>
+        </div>
+
+        <div class="member">
+            <img src="img/member/takeo.jpeg" alt="member4">
+            <p>member4</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- GAME -->
+    <section class="section" id="game">
+
+        <h2>GAME TITLE</h2>
+
+        <div class="game-list">
+
+            <div class="game">
+                <img src="img/game/game_01.jpeg" alt="GAME1">
+                <p>GAME 1</p>
+            </div>
+
+            <div class="game">
+                <img src="img/game/game_02.jpeg" alt="GAME2">
+                <p>GAME 2</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+<section class="section" id="contact">
+
+    <h2>CONTACT</h2>
+
+    <p>
+        お問い合わせはこちらからお願いします。
+    </p>
+
+    <form action="" method="post">
+
+        <!-- 名前 -->
+        <label for="name">名前</label>
+        <br>
+        <input type="text" id="name" name="name">
+
+        <br><br>
+
+        <!-- メールアドレス -->
+        <label for="email">メールアドレス</label>
+        <br>
+        <input type="email" id="email" name="email">
+
+        <br><br>
+
+        <!-- カテゴリ -->
+        <label for="category">カテゴリ</label>
+        <br>
+
+        <select id="category" name="category">
+            <option value="">-- 選択してください --</option>
+            <option value="question">質問</option>
+            <option value="request">ご要望</option>
+            <option value="problem">不具合・問題</option>
+            <option value="other">その他</option>
+        </select>
+
+        <br><br>
+
+        <!-- 内容 -->
+        <label for="message">お問い合わせ内容</label>
+        <br>
+
+        <textarea id="message" name="message" rows="8" cols="50"></textarea>
+
+        <br><br>
+
+        <!-- 送信ボタン -->
+        <input type="button" value="送信"/>
+
+    </form>
+
+    <script>
+        
+    const email = document.getElementById("email");
+    const button = document.querySelector('input[type="button"]');
+
+    button.addEventListener("click", function() {
+
+        // メールアドレスが空の場合
+        if (email.value === "") {
+            alert("メールアドレスを入力してください。");
+            return;
+        }
+
+        // メールアドレスの形式をチェック
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email.value)) {
+            alert("正しいメールアドレスを入力してください。");
+            return;
+        }
+
+        // 正しいメールアドレスの場合
+        alert("お問い合わせを送信しました！");
+    });
+
+    </script>
+
+</section>
+
+
   
